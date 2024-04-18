@@ -7,6 +7,4 @@ docker run -d \
            -p 3316:3306 \
            mysql:8.0.33-debian
 ```
-2) functionality of application 
-3) Right -- open source 
-4) Authors (mention the whole team )
+
