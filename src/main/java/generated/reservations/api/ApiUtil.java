@@ -1,4 +1,4 @@
-package generated.board_game.api;
+package generated.reservations.api;
 
 import org.springframework.web.context.request.NativeWebRequest;
 

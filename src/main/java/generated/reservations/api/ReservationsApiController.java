@@ -1,9 +1,5 @@
-package generated.shopping_cart.api;
+package generated.reservations.api;
 
-import ua.rivnegray.boardgames_shop.DTO.request.create.MapProductInCartCartDto;
-import ua.rivnegray.boardgames_shop.DTO.response.OrderDto;
-import ua.rivnegray.boardgames_shop.DTO.response.ProductInShoppingCartDto;
-import ua.rivnegray.boardgames_shop.DTO.request.update.UpdateQuantityOfProductInShoppingCartDto;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,17 +26,17 @@ import jakarta.annotation.Generated;
 
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen", comments = "Generator version: 7.4.0")
 @Controller
-@RequestMapping("${openapi.shoppingCart.base-path:}")
-public class ShoppingCartApiController implements ShoppingCartApi {
+@RequestMapping("${openapi.anticafeReservationSystem.base-path:}")
+public class ReservationsApiController implements ReservationsApi {
 
-    private final ShoppingCartApiDelegate delegate;
+    private final ReservationsApiDelegate delegate;
 
-    public ShoppingCartApiController(@Autowired(required = false) ShoppingCartApiDelegate delegate) {
-        this.delegate = Optional.ofNullable(delegate).orElse(new ShoppingCartApiDelegate() {});
+    public ReservationsApiController(@Autowired(required = false) ReservationsApiDelegate delegate) {
+        this.delegate = Optional.ofNullable(delegate).orElse(new ReservationsApiDelegate() {});
     }
 
     @Override
-    public ShoppingCartApiDelegate getDelegate() {
+    public ReservationsApiDelegate getDelegate() {
         return delegate;
     }
 
