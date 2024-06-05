@@ -1,0 +1,96 @@
+openapi: 3.0.3
+info:
+  title: Anticafe Reservation System API
+  version: 1.0.0
+servers:
+  - url: 'https://api.anticafe.com'
+
+paths:
+  /reservations:
+    get:
+      summary: Get a list of all reservations
+      responses:
+        '200':
+          description: Success
+    post:
+      summary: Create a new reservation
+      responses:
+        '200':
+          description: Success
+
+  /reservations/{reservationId}:
+    get:
+      summary: Get details of a specific reservation
+      parameters:
+        - name: reservationId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+    patch:
+      summary: Update a specific reservation
+      parameters:
+        - name: reservationId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+    delete:
+      summary: Delete a specific reservation
+      parameters:
+        - name: reservationId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+
+  /me/reservations:
+    get:
+      summary: Get all reservations for the logged-in user
+      responses:
+        '200':
+          description: Success
+
+  /me/reservations/{reservationId}:
+    get:
+      summary: Get details of a user's specific reservation
+      parameters:
+        - name: reservationId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+    patch:
+      summary: Update a user's specific reservation
+      parameters:
+        - name: reservationId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+    delete:
+      summary: Cancel a user's specific reservation
+      parameters:
+        - name: reservationId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
