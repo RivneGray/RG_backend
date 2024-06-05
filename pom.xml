@@ -333,6 +333,23 @@
 							</configOptions>
 						</configuration>
 					</execution>
+
+
+					<execution>
+						<id>generate-reservations-spring-controllers</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<inputSpec>src/main/resources/reservations.yaml</inputSpec>
+
+							<configOptions>
+								<modelPackage>generated.reservations.model</modelPackage>
+								<apiPackage>generated.reservations.api</apiPackage>
+							</configOptions>
+						</configuration>
+					</execution>
 				</executions>
 			</plugin>
 		</plugins>

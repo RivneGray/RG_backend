@@ -1,7 +1,4 @@
-src/main/java/generated/session/api/ApiUtil.java
-src/main/java/generated/session/api/LoginApi.java
-src/main/java/generated/session/api/LoginApiController.java
-src/main/java/generated/session/api/LoginApiDelegate.java
-src/main/java/generated/session/api/RegisterApi.java
-src/main/java/generated/session/api/RegisterApiController.java
-src/main/java/generated/session/api/RegisterApiDelegate.java
+src/main/java/generated/reservations/api/ApiUtil.java
+src/main/java/generated/reservations/api/ReservationsApi.java
+src/main/java/generated/reservations/api/ReservationsApiController.java
+src/main/java/generated/reservations/api/ReservationsApiDelegate.java

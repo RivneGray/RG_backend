@@ -53,14 +53,14 @@ paths:
         '200':
           description: Success
 
-  /me/reservations:
+  /reservations/me:
     get:
       summary: Get all reservations for the logged-in user
       responses:
         '200':
           description: Success
 
-  /me/reservations/{reservationId}:
+  /reservations/me/{reservationId}:
     get:
       summary: Get details of a user's specific reservation
       parameters:
