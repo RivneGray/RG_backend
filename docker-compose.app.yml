@@ -36,10 +36,29 @@ services:
     container_name: frontend
     ports:
       - "80:80"
+      - "443:443"
+    volumes:
+      - ${VM_LOGS_PATH}:/app/logs
+      - ${VM_IMAGES_PATH}:/app/images
+      - cert-data:/etc/letsencrypt:ro
+      - html-data:/var/www/certbot
     networks:
       - app-network
     depends_on:
       - backend
+
+
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - cert-data:/etc/letsencrypt
+      - cert-log:/var/log/letsencrypt
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew --webroot --webroot-path=/var/www/certbot && sleep 12h & wait $${!}; done;'"
+    networks:
+      - app-network
+    depends_on:
+      - frontend
+
 
 networks:
   app-network:
@@ -47,3 +66,7 @@ networks:
 
 volumes:
   db-data:
+  cert-data:
+  cert-log:
+  html-data:
+
