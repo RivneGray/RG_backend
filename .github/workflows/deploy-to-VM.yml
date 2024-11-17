@@ -79,8 +79,8 @@ jobs:
           script: |
             export BACKEND_IMAGE_TAG=${{ env.VERSION }}
             cd ~/rivnegray/
-            docker-compose -f docker-compose.app.yml down
-            docker-compose -f docker-compose.app.yml up -d
+            docker compose -f docker-compose.app.yml down
+            docker compose -f docker-compose.app.yml up -d
 
       - name: Update .env with backend version
         uses: appleboy/ssh-action@master
