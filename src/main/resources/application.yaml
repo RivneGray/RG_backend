@@ -71,5 +71,5 @@ server:
 custom:
   images:
     storage-path: "/app/images/"
-    server-base-url: "http://35.211.88.42:8080"
+    server-base-url: "http://34.88.172.149:8080"
 
