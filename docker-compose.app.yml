@@ -52,7 +52,6 @@ services:
     image: certbot/certbot
     volumes:
       - cert-data:/etc/letsencrypt
-      - html-data:/var/www/certbot
       - cert-log:/var/log/letsencrypt
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew --webroot --webroot-path=/var/www/certbot && sleep 12h & wait $${!}; done;'"
     networks:
